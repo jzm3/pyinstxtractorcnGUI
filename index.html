@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pyinstxtractorcnGUI - 反编译PyInstaller程序的图形界面工具</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%); color: #333; line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 40px 20px; color: white; }
+        h1 { font-size: 2.8rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .subtitle { font-size: 1.3rem; opacity: 0.9; max-width: 800px; margin: 0 auto 30px; }
+        .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin: 5px; }
+        .card { background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
+        h2 { color: #1a2980; border-bottom: 3px solid #26d0ce; padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; }
+        h2 i { margin-right: 10px; }
+        .download-box { text-align: center; background: linear-gradient(to right, #f8f9fa, #e9ecef); padding: 30px; border-radius: 10px; border: 2px dashed #1a2980; margin: 20px 0; }
+        .btn-download { display: inline-block; background: linear-gradient(to right, #1a2980, #26d0ce); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; margin-top: 15px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(26, 41, 128, 0.4); }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(26, 41, 128, 0.6); }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .link-card { background: #f8f9fa; border-left: 5px solid #1a2980; padding: 20px; border-radius: 8px; transition: transform 0.3s; }
+        .link-card:hover { transform: translateX(5px); }
+        .link-card a { color: #1a2980; text-decoration: none; font-weight: bold; display: block; margin-bottom: 8px; }
+        .link-card a:hover { text-decoration: underline; }
+        .link-card .desc { color: #666; font-size: 0.9rem; }
+        .nav-link { text-align: center; margin-top: 30px; }
+        .nav-link a { color: white; text-decoration: none; font-weight: bold; padding: 10px 20px; border: 2px solid white; border-radius: 50px; transition: all 0.3s; }
+        .nav-link a:hover { background: white; color: #1a2980; }
+        footer { text-align: center; color: white; padding: 30px; margin-top: 40px; font-size: 0.9rem; opacity: 0.8; }
+        ul, ol { padding-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-desktop"></i> pyinstxtractorcnGUI</h1>
+            <p class="subtitle">一款对应 Python 库 <strong>pyinstxtractorcn</strong> 的图形界面 (GUI) 版本，提供可视化操作体验，方便反编译由 PyInstaller 打包的 .exe 程序。</p>
+            <div>
+                <span class="badge"><i class="fas fa-toolbox"></i> 逆向工程工具</span>
+                <span class="badge"><i class="fab fa-python"></i> Python</span>
+                <span class="badge"><i class="fas fa-window-restore"></i> 图形界面</span>
+                <span class="badge"><i class="fas fa-sync-alt"></i> 与核心库同步更新</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2><i class="fas fa-info-circle"></i> 项目介绍</h2>
+                <p><strong>pyinstxtractorcnGUI</strong> 是开源 Python 库 <strong>pyinstxtractorcn</strong> 的官方图形界面版本。它将命令行操作转化为直观的点击操作，无需记忆复杂命令，即可轻松解包和分析 PyInstaller 生成的 Windows 可执行文件 (.exe)。</p>
+                <p>本项目将与核心库保持同步更新，为您提供持续稳定的服务。</p>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-download"></i> 下载主程序</h2>
+                <p>获取最新版本的独立可执行程序，无需安装 Python 环境即可在 Windows 系统上直接运行。</p>
+                <div class="download-box">
+                    <h3>pyinstxtractorcnGUI.exe</h3>
+                    <p>版本: 正式版 V1.1.1 | 适用于 Windows 系统</p>
+                    <a href="https://github.com/jzm3/pyinstxtractorcnGUI/releases/download/%E6%AD%A3%E5%BC%8F%E7%89%88V1.1.1/pyinstxtractorcnGUI.exe" class="btn-download" download>
+                        <i class="fas fa-file-download"></i> 立即下载 GUI 主程序
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-external-link-alt"></i> 关联项目与镜像站点</h2>
+                <p>您也可以在以下平台查看或下载本项目及其关联的核心库：</p>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <a href="https://pypi.org/project/pyinstxtractorcn/" target="_blank"><i class="fab fa-python"></i> PyPI 上的核心库</a>
+                        <p class="desc">在 Python 官方包索引 (PyPI) 查看和安装 <strong>pyinstxtractorcn</strong> 库。</p>
+                    </div>
+                    <div class="link-card">
+                        <a href="https://github.com/jzm3/pyinstxtractorCN" target="_blank"><i class="fab fa-github"></i> GitHub 上的核心库</a>
+                        <p class="desc">访问核心库 <strong>pyinstxtractorcn</strong> 的 GitHub 源码仓库。</p>
+                    </div>
+                    <div class="link-card">
+                        <a href="https://gitcode.com/2404_89333710/pyinstxtractorcnGUI" target="_blank"><i class="fas fa-code-branch"></i> GitCode 上的本项目</a>
+                        <p class="desc">在 GitCode 平台查看或下载本 GUI 项目的镜像。</p>
+                    </div>
+                    <div class="link-card">
+                        <a href="https://gitcode.com/2404_89333710/pyinstxtractorcn" target="_blank"><i class="fas fa-code-branch"></i> GitCode 上的核心库</a>
+                        <p class="desc">在 GitCode 平台查看或下载核心库 <strong>pyinstxtractorcn</strong> 的镜像。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-link">
+                <a href="index_lib.html"><i class="fas fa-exchange-alt"></i> 去往核心库 pyinstxtractorcn 的官网</a>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2023 pyinstxtractorcnGUI 项目 | 本页面仅为项目介绍与下载页</p>
+            <p>注意：本工具仅用于合法的软件分析、学习与研究目的，请遵守相关法律法规。</p>
+        </footer>
+    </div>
+</body>
+</html>
